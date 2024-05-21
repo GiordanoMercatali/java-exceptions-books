@@ -1,14 +1,18 @@
 package org.lessons.java;
 
+import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
     private final static int ARRAY_SIZE = 3;
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         Scanner scanner = new Scanner(System.in);
         Book array[] = new Book[ARRAY_SIZE];
+        File file = new File("filename.txt");
+        FileWriter writer = new FileWriter(file);
 
         for (int i = 0; i < array.length; i++) {   
             try {
@@ -32,8 +36,9 @@ public class Main {
             }
             
         } System.out.println(Arrays.toString(array));
-        
+        writer.write(Arrays.toString(array));
         scanner.close();
+        writer.close();
     }
 
     public static void checkNoOfPages(int number) throws InvalidNumberException {

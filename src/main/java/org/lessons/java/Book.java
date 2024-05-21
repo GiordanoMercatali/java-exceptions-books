@@ -49,6 +49,6 @@ public class Book {
     
     @Override
     public String toString() {
-        return  "Title: " + getTitle() + ", N° of Pages: " + getPages() + ", Author: " + getAuthor() + ", Editor: " + getEditor() + "\n";
+        return  "Title: " + getTitle() + ", N. of Pages: " + getPages() + ", Author: " + getAuthor() + ", Editor: " + getEditor() + "\n";
     }
 }
