@@ -10,35 +10,25 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         Book array[] = new Book[ARRAY_SIZE];
 
-        for (int i = 0; i < array.length; i++) {
-            
-            
-
-            
-
-            
-
-            
-            
+        for (int i = 0; i < array.length; i++) {   
             try {
+                System.out.println("Book " + (i+1));
                 System.out.print("Book title: ");
                 String title = scanner.nextLine();
-                checkValidString(title);
 
                 System.out.print("Book number of pages: ");
-            int pages = Integer.parseInt(scanner.nextLine());
-                checkNoOfPages(pages);
+                int pages = Integer.parseInt(scanner.nextLine());
 
                 System.out.print("Book author: ");
-            String author = scanner.nextLine();
-                checkValidString(author);
+                String author = scanner.nextLine();
 
                 System.out.print("Book editor: ");
-            String editor = scanner.nextLine();
-                checkValidString(editor);
+                String editor = scanner.nextLine();
+                
                 array[i] = new Book(title, pages, author, editor);
             } catch (InvalidNumberException | InvalidStringException e) {
                 System.out.print(e.getMessage());
+                i--;
             }
             
         } System.out.println(Arrays.toString(array));
