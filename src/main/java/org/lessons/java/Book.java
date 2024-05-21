@@ -14,19 +14,24 @@ public class Book {
         this.editor = editor;
     }
     
-    // String getTitle(){
-    //     return title;
-    // }
+    String getTitle(){
+        return title;
+    }
 
-    // int getPages(){
-    //     return pages;
-    // }
+    int getPages(){
+        return pages;
+    }
 
-    // String getAuthor(){
-    //     return author;
-    // }
+    String getAuthor(){
+        return author;
+    }
 
-    // String getEditor(){
-    //     return editor;
-    // }
+    String getEditor(){
+        return editor;
+    }
+    
+    @Override
+    public String toString() {
+        return  "Title: " + getTitle() + ", N° of Pages: " + getPages() + ", Author: " + getAuthor() + ", Editor: " + getEditor() + "\n";
+    }
 }
